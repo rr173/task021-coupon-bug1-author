@@ -94,7 +94,7 @@ func mulBps(amount int64, bps int) int64 {
 	if amount <= 0 || bps <= 0 {
 		return 0
 	}
-	return (amount * int64(bps)) / 10000
+	return (amount*int64(bps) + 5000) / 10000
 }
 
 // scopeLabel 把作用域标签转成可读文字用于错误信息。
